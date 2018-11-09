@@ -16,7 +16,8 @@ smat init --<参数>=<参数值> --<参数>=<参数值> <应用名称>
     accept_type = ["web_app", "command_app"]
     template_dict = {
         "web_app": "WebApp",
-        "command_app": "CommandApp"
+        "command_app": "CommandApp",
+        "dock_app":"DockApp"
     }
     if len(args) == 0 or args[0] == "help" or args[-1].find("--") >= 0:
         print(info)
