@@ -10,7 +10,7 @@ def InitCommand(args):
     info = """
 smat init --<参数>=<参数值> --<参数>=<参数值> <应用名称>
 支持的参数
-    type ---- 创建的应用类型，目前支持[command_app, web_app] 默认类型为web_app
+    type ---- 创建的应用类型，目前支持[command_app, web_app, common_app, dock_app] 默认类型为web_app
 """
 
     accept_key = ["type"]
