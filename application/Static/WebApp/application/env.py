@@ -4,6 +4,10 @@ import os
 """
 静态资源
 """
+# app名称
+__appname__ = "SMAT_APP"
+__urlprefix__ = "/SMAT"
+
 # 静态文件夹路径
 STATIC_PATH = os.path.join(os.path.dirname(__file__), "Static")
 # 模板文件夹路径
@@ -32,6 +36,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import Response
+from flask import Blueprint
 """
 --------------------------------------------------
 """
@@ -51,11 +56,13 @@ app = Flask(__name__)
 application = app
 app.template_folder = TEMPLATE_PATH
 
+# 构建蓝图
+blueprint = Blueprint( name=__appname__, import_name=__name__, static_folder=STATIC_PATH, static_url_path=None, template_folder=TEMPLATE_PATH, url_prefix=__urlprefix__, subdomain=None, url_defaults=None, root_path=None)
+
+
 # 主页
 from .Modules.Index import Index
 
-# 静态资源页面
-from .Modules.Static import Static
 """
 ---------------------------------------------------
 """
