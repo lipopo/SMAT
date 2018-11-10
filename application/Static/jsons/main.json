@@ -1,0 +1,13 @@
+{
+  "main":{
+    "accept": [
+      "web_app", "common_app", "dock_app", "command_app"
+    ],
+    "translate": {
+      "web_app": "WebApp",
+      "common_app": "CommonApp",
+      "dock_app": "DockApp",
+      "command_app": "CommandApp"
+    }
+  }
+}

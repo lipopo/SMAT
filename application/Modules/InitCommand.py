@@ -3,6 +3,7 @@
 初始化命令
 """
 from ..env import STATIC_PATH
+from ..env import accept_type, translate_type
 from ..env import os, shutil
 
 def InitCommand(args):
@@ -13,13 +14,14 @@ smat init --<参数>=<参数值> --<参数>=<参数值> <应用名称>
 """
 
     accept_key = ["type"]
-    accept_type = ["web_app", "command_app", "dock_app", "common_app"]
-    template_dict = {
-        "web_app": "WebApp",
-        "command_app": "CommandApp",
-        "dock_app": "DockApp",
-        "common_app": "CommonApp"
-    }
+    # accept_type = ["web_app", "command_app", "dock_app", "common_app"]
+    # template_dict = {
+    #     "web_app": "WebApp",
+    #     "command_app": "CommandApp",
+    #     "dock_app": "DockApp",
+    #     "common_app": "CommonApp"
+    # }
+    template_dict = translate_type
     if len(args) == 0 or args[0] == "help" or args[-1].find("--") >= 0:
         print(info)
         return
