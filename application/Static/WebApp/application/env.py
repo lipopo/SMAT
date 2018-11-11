@@ -41,7 +41,7 @@ from flask import Blueprint
 --------------------------------------------------
 """
 # 本地工具箱
-from .Tools.InitTool.InitTool import InitTool
+
 """
 应用构建
 """
@@ -49,7 +49,6 @@ from .Tools.InitTool.InitTool import InitTool
 构建应用-------------------------------------------
 """
 # 初始化应用
-InitTool()
 
 # 构建应用
 app = Flask(__name__)
