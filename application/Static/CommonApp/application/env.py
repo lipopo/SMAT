@@ -29,9 +29,12 @@ STATIC_PATH = os.path.join(os.path.dirname(__file__), "Static")
 from .Tools.CommonTools.app import APP
 # 初始化应用
 app = APP()
-
-# 导入main函数
-from .Modules.main import main
+# 注册模块的应用
+from .Tools.CommonTools.register_app import register_module
+# 导入模块
+from Modules import *
+# 导入主应用程式
+import app as main_call
 
 """
 ------------------------------------------------------------

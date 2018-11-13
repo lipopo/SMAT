@@ -1,2 +1,2 @@
 # -*- coding: utf8 -*-
-from application.app import app_module
+from application.env import app as app_module
