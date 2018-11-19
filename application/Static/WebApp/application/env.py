@@ -51,13 +51,11 @@ from flask import Blueprint
 # 初始化应用
 
 # 构建应用
-app = Flask(__name__)
+app = Flask(__name__, template_folder=TEMPLATE_PATH)
 application = app
-app.template_folder = TEMPLATE_PATH
-
 # 构建蓝图
 blueprint = Blueprint( name=__appname__, import_name=__name__, static_folder=STATIC_PATH, static_url_path=None, template_folder=TEMPLATE_PATH, url_prefix=__urlprefix__, subdomain=None, url_defaults=None, root_path=None)
-
+from .Tools.CommonTools.register_app import register_app
 
 # 主页
 from .Modules.Index import Index

@@ -1,10 +1,9 @@
 # -*- coding: utf8 -*-
 
-from ..env import blueprint, app
+from ..env import register_app
 from ..env import render_template
 #
-@blueprint.route("/", methods=["GET"])
-@app.route("/", methods=["GET"])
+@register_app("/", methods=["GET"])
 def Index():
     def local_deal(func):
         content = func()
