@@ -1,0 +1,21 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: #555;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #eee;
+}
+
+span {
+    /*border: 1px solid #eee;*/
+    font-size: 5vh;
+}

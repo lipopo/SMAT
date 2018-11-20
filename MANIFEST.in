@@ -1,0 +1,2 @@
+exclude *.pyc
+recursive-include smat/application/Static *
