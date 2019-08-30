@@ -12,6 +12,9 @@ STATIC_PATH = os.path.join(os.path.dirname(__file__), "Static")
 # json资源目录
 JSON_PATH = os.path.join(STATIC_PATH, "jsons")
 
+# 获取下载路径
+smat_server_path = os.environ.get("SMAT_REMOTE_PATH", "http://www.robotli.cn/SMAT")
+
 """
 工具箱
 """
